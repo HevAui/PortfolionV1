@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Portfolio</title>
+        
+            <link rel="stylesheet" href="style.css">
+
+            <style>
+                /* Smooth scrolling behavior for anchor links */
+                html {
+                    scroll-behavior: smooth;
+                }
+            </style>
+
+    </head>
+    <body>
+        <nav class="navbar">
+            <a href="#" class="logo">Portfolio</a>
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Project</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="bars-animation">
+            <div class="bar" style="--i:6;"></div>
+            <div class="bar" style="--i:5;"></div>
+            <div class="bar" style="--i:4;"></div>
+            <div class="bar" style="--i:3;"></div>
+            <div class="bar" style="--i:2;"></div>
+            <div class="bar" style="--i:1;"></div>
+        </div>
+
+        <section class="home">
+        <div class="home-info">
+            <h1>Marc William Dela Cueva</h1>
+            <h2>Aspiring
+                <span style="--i:4;" data-text="IT Support">IT Support</span>
+                <span style="--i:3;" data-text="IT Technical Support">IT Technical Support</span> 
+                <span style="--i:2;" data-text="Computer Technician">Computer Technician</span>
+                <span style="--i:1;" data-text="Web Developer">Web Developer</span>
+            </h2>
+            <p>Driven by a passion for technology and problem-solving, I am an aspiring Web Developer, IT Technical Support specialist, IT Support professional, and Computer Technician. With a strong foundation in web development and hands-on experience in IT systems, I am committed to creating efficient solutions, ensuring smooth operations, and delivering exceptional technical support. I strive to grow and make a meaningful impact in the dynamic field of technology.</p>
+
+        <div class="btn-sci">
+            <a href="CV-Resume.pdf" class="btn">Download CV</a>
+            <div class="sci">
+                <a href="https://www.facebook.com/Maui.delacueva/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAZdJREFUSEuNVtF1wzAIPDbxJvEo9SRxJok7SdNJ7E0Ui1ALJJDqjzxFBp24O0gI10MgJKSyARCAxB+yq9dNoMTb0JwRJ8t50bGc2Ly0F/oAOAeVsO7xugy7VmeGLz7EaHSagHQHYUbi9QHg+4xaGyQDENFsLz8BtLMeNn5DwtIHiAvVb/It707oBmgAaxYlsqOXlf8HoFkc9QJoYYoMg8pwKtfRwHIj33YAkzj3cTK1/tfArsiOuxhA9pdT5K30R9/pthOsZWd16FN1Yeb9VxJfALKb3CfQ4Cr+eSZ/RT0h+4/apjV1sboAA0QWbOgSgXjk9BvtstoK0E24zvz/aXAgCS2ErMdR+sNyTINRonXcAe7efPHcWFkHV11NqQJwrcmjQkrekbSLNEA885TIugPtWspnAKG5sWljhFCDpugrslQgFHXp9Tp5MJhLozGA02i6O2XdUiQcaFeMNaicU/0Ghh1ofj6BqgJs/ixqweJBoqEJjQbjKZ/NMnwcZbpi1W7MAIOZHo+xzr+Na2z0FHB8qOdMF1hy39DCxB/Yo/FiAAAAAElFTkSuQmCC"/></i></a>
+                <a href="https://www.instagram.com/mautelor_12/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAnJJREFUSEuVVsuR2zAMfWgi19VWsvYl9xSQGasS2zPpQ3YZOa1TiZ0cck8FWDwSJEFKTiY+eCwZBPA+gCTgRwBo+kqX9Va9aj/6qHJ2IzDkqQUE6iU8zUbhv1bf+JMp/vERtMI9vBWamCn02NOSu54APUDwBsVu1UHL/HB6b3boDOAxMt4h8HMHAIv/5oFby9ejcQYnb4LFrsbxKSLLBTxSoJMK7naASfdZck8aZVkbYQLw7vaYAb3lnIDE7gBdDCYRvBa4W5BD4a+Wg9T8EeBLaQ7AvngxFEi37hA8oCWgY5+F2ekLBD+guAjwWYHvgPyy5l4ainY+aJCwsLkLgDnwOAmwqGA3zAr1+QbBbyg+GeprLiCTQF/LRI02VQguUMxhtN4FulPB2QWcNNEoR3Mai5DO8ikUU7iswWDBsQATLQI9W0enXnA5CJTI9lChTfn3Ak0aDgVaNXJE0YrVBtE7A3JW7pYsxXujKV4MXjNCtUkK4f2zNXDyvcSuSYW7Klq2atbiI4Jg5cgSKUpc+01OMf1duwwYiPKogtkm//I/FCUXeQHaklPNASxT6iLjyCk3y+7rEnYEjaIicmtrw0XINkXeSQEBHcSBSvsnauBhVes4+D7uPigt24Q0B3gzdD89KZHWih5K0XPhJzZdPFHubLWP+700WJx03m3QqMdc99uQowQ9AO3h+0Ks0+ND5BMbaeS5Wyk+rgreT+s6cFuDBw1KDjZVnhk0x4q6AWm65KGjrY2061dMRdXycuR6v5oRUjPd82P7cHywPEu/+a6w+fyoCIZnw+iQhnR8ZA1vJKO7nieK5EWRV/7sEaeXBI//AP63HC6+KeUbAAAAAElFTkSuQmCC"/></i></a>
+                <a href="https://www.tiktok.com/@hevaui2"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAfFJREFUSEutVtGVgzAMkye5skk7SWGSg0lKJymblE1y2IRETtL23rvrDwESy7ZkUYH+BECwlV/HR3+5aOh/ifwqRwJgnLidT+VMbgD6eLtC0CH4jQ6sHeNtUxKAnTUArLm9AkFImHsFb1Gq4m8Q9IkzYAZk4KCcXt2iRvIxU0sXCBHAZTVtd+OhkxogRrAsGrLKz+2lryCfXQJwB7BsHCk3ltD7ChpcC3ALkeRcmSt7BjCwNr1QP/PBKvIS3xFnIAyNCpqRT1GSX7DyZTEOWKbAJd5fITglAIL2tO44GvgB2PWY8CEebsxBFKIBYOXWtTg4a/BGPdrXOXNgO5qD9kmmT828UP8agEkBTEXWIgZoNeEonN4J0AfBjYZoAeRiTpgVlVRkcgQ6flnZRs6Uh4iFVTUrzcGW0Bqtgsyg8KUC4AHBOVYwQ6DEkpfHQfMq6soG8cASyRZIlXP2/fVsCMIzZHW5oaI2JkcoVdTDc6DEjgQxbll8U8YJoKqTXCCJGAiqe1URU6+TqXu0dXkudhPugmAlUdhT9i5p+Il+TFSKTXHk/TJtgcadosbUuApqiy5bUfI4bVnrHp9EHYfdlK3T1ocPXQU4bQ6qmr9v6zmuX36nnCyKiSX2j2/D7/5oFHJ3Dt2IUBCVJoGf+z25O56PH8QA4B1UniIbAAAAAElFTkSuQmCC"/></i></a>
+                <a href="https://mail.google.com/mail/u/0/#inbox"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAdpJREFUSEuVle15wyAMhF9tkm6SbtJMEnuStJOkm9SbUEuAkQzkafmTGPR5dwLhr0uAFI3bliAk0sSmeBWj44vDwfy8cxcoHloyFycmGFQxa7JLbIYlgPsZdjAO+hKnoYt6eFDi16ybcelTqEtXcoX0RNhIfO0xlte4dwV/AA9gA77206UCVi1/BC6ZHCvxE7i9EplrUANrguq9JeFNlZEhypYnEdrJBvIOSasarUup+ur5Lf9VTCVB3klN6EEJuWVhOZXwIfCoHTdpHnK34h3JReqewEjyupsvVoTwJBlnkdhOoRWibNZzGh20nq0EVWiq4jvo/AiEDsYwxwmfkd4NenZDHCJnklVFSp5VG1bsTDnaBK4nCM4kRwoF1gSa5N4k2HXzDbzvyReBu5O44ter6HRJaQIdFu1ANa6J/Fo1cN4w8su5V9FoDhpmLoBFuYA8SxE3kG+nopygu1RPCVps+7dW7Ts/7WYwdL6Do0k3B+NJPhK0Ke20UrWaOYhzs9M4vSoMx3V3WKbPVIymXBwQNZFJkKlTgtVcOOimLWBQlBM4ELgl4dMuu9bV4F2dvQeDaetMC6Fukv8b7S/2kQOnMj9Q80ADyu2GCjervzxnV4Lfn0NRH5Q47b/ccOMjZ0aaggAAAABJRU5ErkJggg=="/></i></a>
+            </div>
+            
+        </div>
+        </div>
+
+        <div class="home-img">
+            <div class="img-box">
+                <div class="img-item">
+                    <img src="home.png" alt="">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="About">
+        <div class="About-info">
+            <h1>About me</h1>
+
+            <p> Outside of my professional interests, I enjoy playing video games like PUBG Mobile, Valorant, Mobile Legends Bang-Bang and Wild Rift, as well as swimming and making new friends.
+
+                Though I’m a quiet and introverted person, I value meaningful relationships and can easily get along with people. I’m always eager to learn, collaborate, and grow in the ever-evolving world of technology."
+                </p>
+
+        
+
+            <div class="About-img">
+                <!-- First Image Section -->
+                <div class="img-box" onclick="flipImage(this)">
+                    <div class="img-content">
+                        <!-- Front Side: First Image -->
+                        <div class="front">
+                            <div class="rotating-border">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/PUBG_Mobile_simple_logo_black.png/640px-PUBG_Mobile_simple_logo_black.png" alt="Image 1">
+                            </div>
+                        </div>
+                        <!-- Back Side: Text for the First Image -->
+                        <div class="back">
+                            <h2>PUBG Mobile</h2>
+                            <p>A battle royale where 100 players fight to be the last one standing.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Second Image Section -->
+                <div class="img-box" onclick="flipImage(this)">
+                    <div class="img-content">
+                        <!-- Front Side: Second Image -->
+                        <div class="front">
+                            <div class="rotating-border">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Valorant_logo_-_pink_color_version.svg/640px-Valorant_logo_-_pink_color_version.svg.png" alt="Image 2">
+                            </div>
+                        </div>
+                        <!-- Back Side: Text for the Second Image -->
+                        <div class="back">
+                            <h2>Valorant</h2>
+                            <p>A 5v5 tactical FPS with gunplay and unique character abilities.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Third Image Section -->
+                <div class="img-box" onclick="flipImage(this)">
+                    <div class="img-content">
+                        <!-- Front Side: Third Image -->
+                        <div class="front">
+                            <div class="rotating-border">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Mobile_Legends_Bang_Bang_logo.png?20240705090006" alt="Image 3">
+                            </div>
+                        </div>
+                        <!-- Back Side: Text for the Third Image -->
+                        <div class="back">
+                            <h2>Mobile Legends Bang-Bang</h2>
+                            <p>A fast-paced 5v5 MOBA where teams battle to destroy the enemy base.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Fourth Image Section -->
+                <div class="img-box" onclick="flipImage(this)">
+                    <div class="img-content">
+                        <!-- Front Side: Fourth Image -->
+                        <div class="front">
+                            <div class="rotating-border">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/League_of_Legends_Wild_Rift_logo.svg/640px-League_of_Legends_Wild_Rift_logo.svg.png" alt="Image 4">
+                            </div>
+                        </div>
+                        <!-- Back Side: Text for the Fourth Image -->
+                        <div class="back">
+                            <h2>League of Legends: Wild Rift</h2>
+                            <p>Mobile League of Legends with 5v5 strategy-focused gameplay.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>      
+            
+            <script> 
+           function flipImage(box) {
+                     box.querySelector('.img-content').classList.toggle('flipped');
+}
+
+
+            </script>
+    </section>
+
+    <section id="projects" class="Projects">
+        <h1>My Projects</h1>
+    <div class="Projects-info">
+        <div class="Projects-img" onclick="expandImage(this)">
+            <img id="project-image" src="project1.png" alt="Project Image">
+        </div>
+
+        <div class="Projects-details">
+            <h1>Implementation of Class Scheduler Management System</h1>
+            <p class="hidden-info">
+                IT aims to efficiently manage class schedules while detecting conflicts such as overlapping room usage, faculty
+                assignments, time slots, courses, and exam schedules. This system is developed using HTML, PHP, CSS, and
+                MySQL to ensure a dynamic and user-friendly scheduling process.
+            </p>
+        </div>
+    </div>
+    </section>
+
+    <div id="skills" class="skills-body">
+        <h1>Skills</h1>
+        <div class="skills">
+            <div class="skill-button" onclick="showDescription('HTML', '3 years Exp (2020-2023)', 'My school introduced the basics in my first year of college and started to self-learn more about HTML and web development.')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML">
+            </div>
+            <div class="skill-button" onclick="showDescription('CSS', '2 years Exp', 'Specialized in responsive designs and creative layouts.')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS">
+            </div>
+            <div class="skill-button" onclick="showDescription('JavaScript', '2 years Exp', 'Focused on front-end interactivity and dynamic applications.')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript">
+            </div>
+            <div class="skill-button" onclick="showDescription('MySQL', '4 years Exp', 'Started to use SQL through PHPMyAdmin when I was in 1st year Senior High School with Java till now with web development.')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/MySQL_textlogo.svg/640px-MySQL_textlogo.svg.png" alt="SQL">
+            </div>
+            <div class="skill-button" onclick="showDescription('MySQL', '4 years Exp', 'Same progress with other languages I used in web development.')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/PHP_Logo%2C_text_only.svg/640px-PHP_Logo%2C_text_only.svg.png" alt="PHP">
+            </div>
+        </div>
+
+        <div class="description" id="description">
+            <h2>HTML</h2>
+            <p>3 years Exp (2020-2023)</p>
+            <p>My school introduced the basics in my first year of college and started to self-learn more about HTML and web development.</p>
+        </div>
+    </div>
+
+    <script>
+        const projectImages = ["project1.png", "project2.png"];
+    let currentImageIndex = 0;
+
+    function expandImage(element) {
+        // Toggle the 'expanded' class for the clicked element
+        const isExpanded = element.classList.toggle('expanded');
+        const details = element.nextElementSibling;
+
+        // Show/hide project details based on expansion
+        if (details) {
+            if (isExpanded) {
+                details.classList.add('active');
+            } else {
+                details.classList.remove('active');
+            }
+        }
+
+        // Toggle between images
+        const imageElement = document.getElementById("project-image");
+        currentImageIndex = (currentImageIndex + 1) % projectImages.length;
+        imageElement.src = projectImages[currentImageIndex];
+    }
+
+        function showDescription(skill, years, details) {
+            const description = document.getElementById('description');
+            description.innerHTML = `
+                <h2>${skill}</h2>
+                <p>${years}</p>
+                <p>${details}</p>
+            `;
+        }
+    </script>
+    
+
+
+    </body>
+</html>

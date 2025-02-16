@@ -1,0 +1,751 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    color: yellow;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.navbar {
+    position: fixed;
+    background-color: black;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.5s ease-in-out forwards;
+    animation-delay: 1.2s;
+}
+
+@keyframes show-content {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar .logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: yellow;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin-left: 25px;
+}
+
+.navbar ul li a {
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.navbar ul li:hover a,
+.navbar ul li.active a {
+    color: white;
+    border-bottom: 2px solid yellow;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    height: 100vh;
+    padding: 60px 8% 0;
+    color: yellow;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.5s ease-in-out forwards;
+    animation-delay: 1.6s;
+}
+
+.home-info h1 {
+    display: inline-block;
+    font-size: 55px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.home-info h2 {
+    display: inline-block;
+    font-size: 32px;
+    margin-top: -10px;
+}
+
+.home-info h2 span {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: 0.7px rgb(0, 0, 0);
+    animation: display-text 16s ease-in-out infinite;
+    animation-delay: calc(-4s * var(--i));
+}
+
+@keyframes display-text {
+    25%, 100% {
+        display: none;
+    }
+}
+
+.home-info h2 span::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 0;
+    border: 2px solid rgb(0, 0, 0);
+    color: yellow;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fill-text 4s ease-in-out infinite;
+}
+
+@keyframes fill-text {
+    10%, 100% {
+        width: 0;
+    }
+    70%, 90% {
+        width: 100%;
+    }
+}
+
+.home-info p {
+    font-size: 16px;
+    text-align: justify;
+    margin: 10px 0 25px;
+}
+
+.home-info .btn-sci {
+    display: flex;
+    align-items: center;
+}
+
+.home-info .btn-sci .sci {
+    margin-left: 20px;
+}
+
+.home-info .btn-sci .sci a {
+    display: inline-flex;
+    background: white;
+    padding: 8px;
+    border: 2px solid yellow;
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    margin: 0 8px;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-info .btn-sci .sci a:hover {
+    background: yellow;
+    color: white;
+    box-shadow: 0 0 10px yellow;
+    transform: scale(1.1);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 35px;
+    background: white;
+    border: 2px solid yellow;
+    border-radius: 40px;
+    box-shadow: 0 0 10px yellow;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background: transparent;
+    color: yellow;
+    transform: scale(1.05);
+}
+
+.home-img .img-box {
+    position: relative;
+    width: 32vw;
+    height: 32vw;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.7);
+}
+
+.home-img .img-box::before,
+.home-img .img-box::after {
+    content: '';
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    background: conic-gradient(transparent, transparent, transparent, yellow);
+    transform: rotate(0deg);
+    animation: rotate-border 8s linear infinite;
+}
+
+@keyframes rotate-border {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.home-img .img-box::after {
+    animation-delay: 4s;
+}
+
+.home-img .img-box .img-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: black;
+    border-radius: 50%;
+    border: 0.1px solid black;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.home-img .img-box .img-item img {
+    position: absolute;
+    top: 30px;
+    display: block;
+    width: 85%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+ 
+/* Full-Screen Bars Animation */
+.bars-animation {
+    position: fixed; /* Ensures it fills the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: -1; /* Background layer */
+    overflow: hidden; /* Ensures animation doesn't overflow */
+}
+
+.bars-animation .bar {
+    flex: 1; /* Ensures bars fill evenly */
+    height: 300%;
+    background: rgb(0, 0, 0); /* Black background */
+    transform: translateY(-100%); /* Start off-screen */
+    animation: show-bars 0.5s ease-in-out forwards;
+    animation-delay: calc(0.1s * var(--i)); /* Staggered animation */
+}
+
+/* Keyframes for bar animation */
+@keyframes show-bars {
+    to {
+        transform: translateY(0); /* Slides bars into view */
+    }
+}
+
+
+/*ABOUT*/
+
+.About {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    height: 100vh; /* Adjust height for better responsiveness */
+    padding: 60px 8%;
+    color: yellow;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.5s ease-in-out forwards;
+    animation-delay: 1.6s;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    justify-content: center; /* Centers content horizontally */
+}
+
+.About-info h1 {
+    font-size: 42px;
+    text-align: center;
+    margin-top: 0;
+    position: relative;
+    top: -20px; /* Adjusts vertical alignment */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for emphasis */
+}
+
+.About-info p {
+    text-align: center;
+    font-size: 16px;
+    margin: 15px 0 25px;
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Image container layout */
+.About-img {
+    display: flex;
+    gap: 40px; /* Adjusted spacing for better alignment */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Responsive wrapping */
+}
+
+/* Individual image container */
+.img-box {
+    perspective: 1200px; /* Depth for 3D rotation */
+    width: 200px; /* Adjusted width for uniform size */
+    height: 300px; /* Adjusted height for better aspect ratio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensures content stays within bounds */
+    background: rgba(0, 0, 0, 0.6); /* Background behind the image */
+    border-radius: 10px; /* Rounded corners for better design */
+}
+
+.img-box:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 20px rgba(255, 255, 0, 0.4); /* Glow effect */
+}
+
+/* Rotating Border */
+.rotating-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+    border: 5px solid transparent;
+    background: linear-gradient(90deg, yellow, rgb(0, 0, 0), yellow) 0 0 / 300% 300%;
+    animation: snake-border 6s linear infinite;
+}
+
+/* Snake-like animation */
+@keyframes snake-border {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 200% 0%;
+    }
+}
+
+/* Front image styling */
+.front img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the full image is displayed without cropping */
+    z-index: 0;
+    border-radius: 10px; /* Matches container border */
+}
+
+/* Back face styling */
+.back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    color: yellow;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    box-shadow: inset 0 0 10px rgba(255, 255, 0, 0.4); /* Inner glow effect */
+    border-radius: 10px; /* Matches container border */
+}
+
+.back h2 {
+    margin: 10px 0;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Slight shadow */
+}
+
+.back p {
+    margin: 0;
+    text-align: justify;
+    font-size: 14px;
+    line-height: 1.5; /* Better readability */
+}
+
+/* Flip animation for the content */
+.img-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+}
+
+.img-content.flipped {
+    transform: rotateY(180deg); /* Flip effect */
+}
+
+/* Front and back face styling */
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+
+
+/*Projects*/
+
+/* General section styles */
+section.Projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 110vh;
+    padding: 20px;
+    color: yellow;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.5s ease-in-out forwards;
+    animation-delay: 1.6s;
+}
+
+/* Centered heading */
+.Projects h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: yellow;
+    font-weight: bold;
+    margin: 0 0 20px;
+    opacity: 0;
+    animation: slideFadeDown 3s ease-out forwards;
+}
+
+/* Keyframes for heading animation */
+@keyframes slideFadeDown {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Project container */
+.Projects-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeSlideUp 6s ease-out forwards;
+}
+
+/* Animation for project reveal */
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Image container */
+.Projects-img {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Projects-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Expanding effect with yellow shadow */
+.Projects-img.expanded {
+    width: 300px; /* Larger size */
+    height: 300px; /* Larger size */
+    box-shadow: 0 12px 24px rgba(255, 255, 0, 0.6); /* Yellow glowing shadow */
+    z-index: 10;
+    flex-shrink: 0; /* Prevent shrinking in flexbox */
+    transition: all 0.5s ease-in-out;
+}
+
+.Projects-img.expanded img {
+    transform: scale(1.1); /* Slight zoom effect */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Project details container */
+.Projects-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 400px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    margin-top: 20px; /* Add spacing between the image and text */
+}
+
+.Projects-details h1 {
+    font-size: 1.5rem;
+    color: yellow;
+    margin: 10px 0; /* Spacing between title and image */
+}
+
+.Projects-details p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+    margin: 10px 0; /* Consistent spacing for the description */
+}
+
+/* Reveal details when expanded */
+.Projects-details.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Additional info styling */
+.hidden-info {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.5;
+    padding: 10px; /* Padding for readability */
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Projects-info {
+        flex-direction: column; /* Stack projects vertically */
+        align-items: center;
+    }
+
+    .Projects-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .Projects-img.expanded {
+        width: 90%; /* Adjust size on smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .Projects-details {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .hidden-info {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Hover effect for images */
+.Projects-img:hover img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/*Skills*/
+
+.skills-body {
+    display: flex;
+    flex-direction: column; /* Adjust layout for better responsiveness */
+    font-family: 'Press Start 2P', cursive; /* For retro vibes */
+    margin: 50px auto; /* Add balanced margin */
+    padding: 50px; /* Adjust padding for better spacing */
+    box-sizing: border-box; /* Include padding and border in width */
+    animation: fadeIn 6s ease-in-out;
+    align-items: center; /* Center content horizontally */
+    max-width: 1200px; /* Limit the width for balanced layout on large screens */
+    padding-top: 0; /* Fine-tune padding for a balanced look */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h1 {
+    color: yellow;
+    text-align: center;
+    font-size: 42px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    animation: slideDown 6s ease-in-out;
+    margin: 20px auto; /* Center horizontally */
+    max-width: 90%; /* Prevent overflow */
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.skills {
+    display: flex;
+    gap: 20px; /* Increase gap for better balance */
+    justify-content: center; /* Center all child elements */
+    flex-wrap: wrap;
+    padding: 20px; /* Adjust padding for spacing */
+    max-width: 100%; /* Ensure it stays within the screen */
+    animation: fadeInUp 6s ease-in-out;
+    box-sizing: border-box;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.skill-button {
+    width: 60px;
+    height: 60px;
+    background-color: #eee;
+    border: 3px solid yellow;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+    margin: 15px; /* Add balanced margin around buttons */
+}
+
+.skill-button:hover {
+    transform: scale(1.1);
+}
+
+.skill-button img {
+    width: 60%;
+    margin-top: -5px;
+}
+
+.description {
+    margin: 20px auto;
+    width: 90%; /* Adjust for smaller screens */
+    max-width: 500px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 4px solid yellow;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    animation: fadeIn 6s ease-in-out;
+    box-sizing: border-box;
+}
+
+.description h2 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.description p {
+    font-size: 12px;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .description {
+        width: 95%; /* Increased to ensure fit on small screens */
+    }
+
+    .skills {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Increased gap for smaller screens */
+    }
+
+    .skill-button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .skill-button img {
+        width: 70%;
+    }
+}
